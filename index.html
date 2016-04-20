@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.2, minimum-scale=1.2, maximum-scale=1.2, user-scalable=yes" charset="UTF-8" />
+  <title>SoloWeightsWeb</title>
+  <link rel="stylesheet" type="text/css" href="holo-base-elements.css" />
+  <link rel="stylesheet" type="text/css" href="holo-dark-elements.css" />
+  <link rel="stylesheet" type="text/css" href="holo-base-widgets.css" />
+  <link rel="stylesheet" type="text/css" href="holo-dark-widgets.css" />
+  <link rel="stylesheet" type="text/css" href="roboto.css" />
+  <link rel="stylesheet" type="text/css" href="styles/main.sass.css" />
+  <script type="text/javascript" src="holo-touch.js"></script>
+  <script type="text/javascript" src="solo-weights-web.js"></script>
+</head>
+
+<body onload="setUI()">
+  <header class="actionBar"><span>SoloWeightsWeb</span>
+    <button class="buttonright" onclick="doAbout()">About</button>
+  </header>
+  <input type="text" class="bigtext" id="myMinWeight" size="20" />
+  <br />
+  <select name="myRuleset" id="myRuleset">
+    <option selected="selected">2013 SCCA Solo Rules</option>
+    <option>2012 SCCA Solo Rules</option>
+  </select>
+  <br />
+  <select name="myClass" id="myClass">
+    <option selected="selected">XP</option>
+    <option>BP</option>
+    <option>CP</option>
+    <option>DP</option>
+    <option>EP</option>
+    <option>FP</option>
+    <option>DM</option>
+    <option>EM</option>
+    <option>SM</option>
+    <option>SSM</option>
+    <option>SMF</option>
+  </select>
+  <select name="myCyls" id="myCylinders">
+    <option selected="selected">8-cyl</option>
+    <option>6-cyl</option>
+    <option>5-cyl</option>
+    <option>4-cyl</option>
+    <option>3-rtr</option>
+    <option>2-rtr</option>
+  </select>
+  <select name="myDrive" id="myDrive">
+    <option selected="selected">RWD</option>
+    <option>FWD</option>
+    <option>AWD</option>
+  </select>
+  <br />
+  <input name="myDisplacement" id="myDisplacement" type="number" placeholder="Enter displacement" autofocus />
+  <select name="myUnits" id="myUnits">
+    <option selected="selected">cc</option>
+    <option>l</option>
+    <option>ci</option>
+  </select>
+  <br /> &nbsp;&nbsp;&nbsp;Wheel size:&nbsp;
+  <select name="myWheelDiameter" id="myWheelDiameter">
+    <option>13"</option>
+    <option>14"</option>
+    <option>15"</option>
+    <option selected="selected">16"</option>
+    <option>17"</option>
+    <option>18"</option>
+  </select>
+  <select name="myWheelWidth" id="myWheelWidth">
+    <option>5"</option>
+    <option>6"</option>
+    <option>7"</option>
+    <option>8"</option>
+    <option>9"</option>
+    <option selected="selected">10"</option>
+    <option>11"</option>
+    <option>12"</option>
+  </select>
+  <br />
+  <input type="checkbox" id="forcedInduction" />Forced Induction
+  <br />
+  <input type="checkbox" id="abs" />Anti-lock Brakes
+  <br />
+  <input type="checkbox" id="tractionControl" />Traction Control
+  <br />
+  <input type="checkbox" id="suspension" />Active Suspension
+  <br />
+  <input type="checkbox" id="engine" />Mid/Rear Engine
+  <br />
+  <input type="checkbox" id="valves" />2-Valves/Cylinder
+  <br />
+  <input type="checkbox" id="solidaxle" />Solid Rear Axle
+  <br />
+  <input type="checkbox" id="twoseater" />Two Seats Only
+  <br />
+  <input type="checkbox" id="skinnytire" />Tire &lt; 275mm
+  <br />
+  <input type="checkbox" id="pushrod" />Pushrod/OHV
+  <br />
+  <input type="checkbox" id="bias" />Weight Bias Adj.
+  <br />
+  <input type="checkbox" id="tubbed" />Modified Tub
+  <br />
+  <button type="button" id="myCalculate" onclick="calculateWeight()">Calculate!</button>
+</body>
+
+</html>
